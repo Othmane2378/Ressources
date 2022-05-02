@@ -1,10 +1,10 @@
 package main;
 
 import java.awt.EventQueue;
+import java.io.IOException;
 
 import javax.swing.JFrame;
-
-//code
+import main.Plateau;
 
 public class main {
 
@@ -23,14 +23,16 @@ public class main {
 		});
 	}
 
-	public main() {
+	public main() throws IOException {
 		initialize();
+		Plateau.screenRender(frame);
 	}
 
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100,100, 850,600);
+		frame.setBounds(100,100, 1200,720);
 		frame.setLocationRelativeTo(null);
+		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 	}
 
