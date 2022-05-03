@@ -1,42 +1,25 @@
 package main;
 
 import java.awt.BasicStroke;
-import java.awt.Canvas;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-import java.awt.Insets;
 import java.awt.Polygon;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.Stroke;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.nio.channels.FileLockInterruptionException;
-import java.util.Iterator;
-
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
-import javax.swing.JInternalFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
-import javax.swing.border.StrokeBorder;
 
 public class Plateau extends JFrame {
-
 	static int
 	posX = 150,
 	posY = 0,
 	imageX = 2816,
 	imageY = 2112;
+	
 	
 	public static void screenRender(JFrame main_frame) throws IOException  {
 		JPanel fond = new DrawHexagon();
@@ -46,8 +29,8 @@ public class Plateau extends JFrame {
 	}
 }
 
+
 class DrawHexagon extends JPanel{
-	
 	
 	@Override
 	public void paintComponent(Graphics g){
